@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: linear-gradiet(300deg, #757b87, #909d9d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+input {
+    padding: 1rem;
+    border-radius: 25px;
+    border: none;
+    background-color: #fff;
+    font-family: inherit;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    font-size: 1rem;
+    opacity: 60%;
+}
+input:focus {
+    outline: none;
+}
+.weather {
+    text-align: center;
+    font-size: 2rem;
+}
+.weather h2 {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+ .weather img{ 
+    transform: scale(2); 
+}
+  .banner::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 200%;
+    height: 110%;
+    background: rgb(43, 38, 38);
+  }
+  
+  @keyframes morph {
+    0%,
+    100% {
+      border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+    34% {
+      border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+    67% {
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+  }
+  
+  .banner img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    animation: morph 3.5s linear infinite;
+  }
